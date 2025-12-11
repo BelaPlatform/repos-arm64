@@ -55,10 +55,10 @@ usb_bcdUSB="0x0200"
 usb_serialnr="000000"
 usb_product="USB Device"
 
-usb_iserialnumber="1234BBBK5678"
+usb_iserialnumber="$(echo $MAC_ADDR | sed "s/://g")"
 #usb_iserialnumber="$(cat /proc/device-tree/serial-number)"
 usb_imanufacturer="$(cat /proc/device-tree/model | awk '{print $1}' | tr -d '\000')"
-usb_iproduct="$(cat /proc/device-tree/model | awk '{print $2}' | tr -d '\000')"
+usb_iproduct="Bela-$(echo "$MAC_ADDR" | cut -d: -f5,6 --output-delimiter="")"
 
 #usb0 mass_storage
 usb_ms_stall=0
@@ -219,6 +219,11 @@ run_libcomposite () {
 					sleep 1
 				fi
 			fi
+		fi
+
+		if [ ! "x${USB_MIDI_DISABLED}" = "xyes" ]; then
+			mkdir -p functions/midi.usb0            # MIDI
+			ln -s functions/midi.usb0 configs/c.1
 		fi
 	fi
 
