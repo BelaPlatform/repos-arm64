@@ -31,8 +31,8 @@ elif [ -f /usr/bin/bb-setup-mac-address ] ; then
 	. /etc/default/bb-mac-addr
 fi
 
-if [ -f /etc/default/bb-boot ] ; then
-	. /etc/default/bb-boot
+if [ -f /etc/default/bela-boot ] ; then
+	. /etc/default/bela-boot
 fi
 
 if [ -f /etc/default/generic-sys-mods ] ; then

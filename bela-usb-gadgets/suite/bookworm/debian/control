@@ -1,12 +1,12 @@
-Source: bb-usb-gadgets
+Source: bela-usb-gadgets
 Section: misc
 Priority: extra
-Maintainer: Robert Nelson <robertcnelson@gmail.com>
+Maintainer: Giulio Moro <giuliomoro@yahoo.it>
 Build-Depends:
  debhelper (>= 10)
 Standards-Version: 4.5.1
 
-Package: bb-usb-gadgets
+Package: bela-usb-gadgets
 Architecture: all
 Depends:
  ${shlibs:Depends}

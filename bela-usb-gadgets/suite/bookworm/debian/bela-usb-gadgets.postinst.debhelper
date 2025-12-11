@@ -1,17 +1,17 @@
 # Automatically added by dh_systemd_enable/13.3.4
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
-	if deb-systemd-helper debian-installed 'bb-usb-gadgets.service'; then
+	if deb-systemd-helper debian-installed 'bela-usb-gadgets.service'; then
 		# This will only remove masks created by d-s-h on package removal.
-		deb-systemd-helper unmask 'bb-usb-gadgets.service' >/dev/null || true
+		deb-systemd-helper unmask 'bela-usb-gadgets.service' >/dev/null || true
 
-		if deb-systemd-helper --quiet was-enabled 'bb-usb-gadgets.service'; then
+		if deb-systemd-helper --quiet was-enabled 'bela-usb-gadgets.service'; then
 			# Create new symlinks, if any.
-			deb-systemd-helper enable 'bb-usb-gadgets.service' >/dev/null || true
+			deb-systemd-helper enable 'bela-usb-gadgets.service' >/dev/null || true
 		fi
 	fi
 
 	# Update the statefile to add new symlinks (if any), which need to be cleaned
 	# up on purge. Also remove old symlinks.
-	deb-systemd-helper update-state 'bb-usb-gadgets.service' >/dev/null || true
+	deb-systemd-helper update-state 'bela-usb-gadgets.service' >/dev/null || true
 fi
 # End automatically added section

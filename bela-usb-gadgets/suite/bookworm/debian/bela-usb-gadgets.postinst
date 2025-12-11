@@ -7,11 +7,11 @@ if [ ! -f /etc/systemd/system/getty.target.wants/serial-getty@ttyGS0.service ] ;
 fi
 
 if [ ! -f /etc/systemd/network/usb0.network ] ; then
-	cp -v /etc/bbb.io/templates/usb0-DHCPServer.network /etc/systemd/network/usb0.network
+	cp -v /etc/bela.io/templates/usb0-DHCPServer.network /etc/systemd/network/usb0.network
 fi
 
 if [ ! -f /etc/systemd/network/usb1.network ] ; then
-	cp -v /etc/bbb.io/templates/usb1-DHCPServer.network /etc/systemd/network/usb1.network
+	cp -v /etc/bela.io/templates/usb1-DHCPServer.network /etc/systemd/network/usb1.network
 fi
 
 if [ ! -d /etc/systemd/system/systemd-networkd-wait-online.service.d/ ] ; then
@@ -19,11 +19,11 @@ if [ ! -d /etc/systemd/system/systemd-networkd-wait-online.service.d/ ] ; then
 fi
 
 if [ ! -f /etc/systemd/system/systemd-networkd-wait-online.service.d/override.conf ] ; then
-	cp -v /etc/bbb.io/templates/systemd-networkd-wait-online.override.conf /etc/systemd/system/systemd-networkd-wait-online.service.d/override.conf
+	cp -v /etc/bela.io/templates/systemd-networkd-wait-online.override.conf /etc/systemd/system/systemd-networkd-wait-online.service.d/override.conf
 fi
 
-if [ ! -f /etc/default/bb-boot ] ; then
-	cp -v /etc/bbb.io/templates/bb-boot /etc/default/bb-boot
+if [ ! -f /etc/default/bela-boot ] ; then
+	cp -v /etc/bela.io/templates/bela-boot /etc/default/bela-boot
 fi
 
 #DEBHELPER#
