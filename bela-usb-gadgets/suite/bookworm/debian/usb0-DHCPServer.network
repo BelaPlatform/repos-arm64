@@ -5,8 +5,8 @@ Name=usb0
 RequiredForOnline=no
 
 [Network]
-DHCP=no
-Address=192.168.7.2/24
+DHCP=yes
+Address=192.168.6.2/24
 DHCPServer=on
 
 [DHCPServer]
