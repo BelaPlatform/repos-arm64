@@ -1,4 +1,4 @@
-bela-usb-gadgets (1.20251211.0-0~bookworm+20251211) bookworm; urgency=low
+bela-usb-gadgets (1.20251216.0-0~bookworm+20251216) bookworm; urgency=low
 
   * restore rndis
   * use Bela-hash as the device name, where hash are the last four digits of
@@ -6,5 +6,5 @@ bela-usb-gadgets (1.20251211.0-0~bookworm+20251211) bookworm; urgency=low
   * use a unique serial based no the mac address
   * enable midi
 
- -- Giulio Moro <giuliomoro@yahoo.it>  Thu, 11 Dec 2025 18:55:40 -0500
+ -- Giulio Moro <giuliomoro@yahoo.it>  Thu, 16 Dec 2025 18:55:40 -0500
 
