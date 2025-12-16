@@ -57,7 +57,7 @@ usb_product="USB Device"
 
 usb_iserialnumber="$(echo $MAC_ADDR | sed "s/://g")"
 #usb_iserialnumber="$(cat /proc/device-tree/serial-number)"
-usb_imanufacturer="$(cat /proc/device-tree/model | awk '{print $1}' | tr -d '\000')"
+usb_imanufacturer="Augmented Instruments Ltd"
 usb_iproduct="Bela-$(echo "$MAC_ADDR" | cut -d: -f5,6 --output-delimiter="")"
 
 #usb0 mass_storage
@@ -106,7 +106,7 @@ run_libcomposite () {
 		echo ${usb_iproduct} > strings/0x409/product
 
 		mkdir -p configs/c.1/strings/0x409
-		echo "BeagleBone Composite" > configs/c.1/strings/0x409/configuration
+		echo "Bela Composite" > configs/c.1/strings/0x409/configuration
 
 		echo 500 > configs/c.1/MaxPower
 
@@ -147,7 +147,7 @@ run_libcomposite () {
 			echo "%SystemRoot%\\system32\\shell32.dll,-233" > functions/rndis.usb0/os_desc/interface.rndis/Icons/data
 			mkdir -p functions/rndis.usb0/os_desc/interface.rndis/Label
 			echo 1 > functions/rndis.usb0/os_desc/interface.rndis/Label/type
-			echo "BeagleBone USB Ethernet" > functions/rndis.usb0/os_desc/interface.rndis/Label/data
+			echo "Bela USB Ethernet" > functions/rndis.usb0/os_desc/interface.rndis/Label/data
 			ln -s functions/rndis.usb0 configs/c.1/
 
 			mkdir -p functions/ncm.usb0
