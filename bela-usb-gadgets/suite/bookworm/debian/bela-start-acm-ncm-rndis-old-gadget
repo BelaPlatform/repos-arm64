@@ -227,9 +227,6 @@ run_libcomposite () {
 		fi
 	fi
 
-	###FIXME:
-	sleep 5
-
 	cd /sys/kernel/config/usb_gadget/g_multi
 
 	ls /sys/class/udc/ > UDC
